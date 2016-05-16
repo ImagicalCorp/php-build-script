@@ -98,7 +98,7 @@ wp="install_log/log_wget_php"
 	echo $im_install_echo
 	if ["$z" == "PHP_7.0.2_x86_Linux.tar.gz"]
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
-	elseif ["$z" == "PHP_7.0.2_x86-64_Linux.tar.gz"]
+	elif ["$z" == "PHP_7.0.2_x86-64_Linux.tar.gz"]
 	wget https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
 	else
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
