@@ -96,9 +96,9 @@ w="install_log/log_wget"
 wp="install_log/log_wget_php"
 
 	echo $im_install_echo
-	if ["$z" == "PHP_7.0.2_x86_Linux.tar.gz"]
+	if [ "$z" == "PHP_7.0.2_x86_Linux.tar.gz" ]
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
-	elif ["$z" == "PHP_7.0.2_x86-64_Linux.tar.gz"]
+	elif [ "$z" == "PHP_7.0.2_x86-64_Linux.tar.gz" ]
 	wget https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
 	else
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
@@ -112,10 +112,10 @@ wp="install_log/log_wget_php"
 	cd .. >>../$l 2>>../$le
 	rm -rf ImagicalMine-master >>./$l 2>>./$le
 	rm -rf master.zip >>./$l 2>>./$le
-	if ["$z" == "PHP_7.0.2_x86_Linux.tar.gz"]
+	if [ "$z" == "PHP_7.0.2_x86_Linux.tar.gz" ]
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
-	elif ["$z" == "PHP_7.0.2_x86-64_Linux.tar.gz"]
+	elif [ "$z" == "PHP_7.0.2_x86-64_Linux.tar.gz" ]
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
 	else
@@ -131,9 +131,9 @@ wp="install_log/log_wget_php"
 	tar zxvf rasp* >>./$lp 2>>./$lpe
 	rm -r rasp* >>./$lp 2>>./$lpe
 	else
-	if ["$z" == "PHP_7.0.2_x86_Linux.tar.gz"]
+	if [ "$z" == "PHP_7.0.2_x86_Linux.tar.gz" ]
 	curl -O --insecure https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
-	elif ["$z" == "PHP_7.0.2_x86-64_Linux.tar.gz"]
+	elif [ "$z" == "PHP_7.0.2_x86-64_Linux.tar.gz" ]
 	curl -O --insecure https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
 	else
 	wget --no-check-certificate https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
