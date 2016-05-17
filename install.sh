@@ -140,7 +140,6 @@ wp="install_log/log_wget_php"
 	chmod 777 PHP* >>./$lp 2>>./$lpe
 	tar zxvf PHP* >>./$lp 2>>./$lpe
 	rm -r PHP* >>./$lp 2>>./$lpe
-	fi
 	echo
         echo $loop_prompt
         echo $yes
