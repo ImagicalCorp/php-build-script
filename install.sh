@@ -131,11 +131,11 @@ wp="install_log/log_wget_php"
 	tar zxvf rasp* >>./$lp 2>>./$lpe
 	rm -r rasp* >>./$lp 2>>./$lpe
 	elif [ "$z" == "PHP_7.0.3_x86_Linux.tar.gz" ]; then
-	curl -O --insecure https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
+	curl -O --insecure https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
 	elif [ "$z" == "PHP_7.0.3_x86-64_Linux.tar.gz" ]; then
-	curl -O --insecure https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
+	curl -O --insecure https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
 	else
-	wget --no-check-certificate https://bintray.com/artifact/download/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
+	wget --no-check-certificate https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
 	fi
 	chmod 777 PHP* >>./$lp 2>>./$lpe
 	tar zxvf PHP* >>./$lp 2>>./$lpe
