@@ -96,9 +96,9 @@ w="install_log/log_wget"
 wp="install_log/log_wget_php"
 
 	echo $im_install_echo
-	if [ "$z" == "PHP_7.0.3_x86_Linux.tar.gz" ]; then
+	if [ "$z" == "PHP_7.0.3_x86_MacOS.tar.gz" ]; then
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
-	elif [ "$z" == "PHP_7.0.3_x86-64_Linux.tar.gz" ]; then
+	elif [ "$z" == "PHP_7.0.3_x86-64_MacOS.tar.gz" ]; then
 	wget https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
 	else
 	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
@@ -112,10 +112,10 @@ wp="install_log/log_wget_php"
 	cd .. >>../$l 2>>../$le
 	rm -rf ImagicalMine-master >>./$l 2>>./$le
 	rm -rf master.zip >>./$l 2>>./$le
-	if [ "$z" == "PHP_7.0.3_x86_Linux.tar.gz" ]; then
+	if [ "$z" == "PHP_7.0.3_x86_MacOS.tar.gz" ]; then
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
-	elif [ "$z" == "PHP_7.0.3_x86-64_Linux.tar.gz" ]; then
+	elif [ "$z" == "PHP_7.0.3_x86-64_MacOS.tar.gz" ]; then
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
 	else
@@ -130,9 +130,9 @@ wp="install_log/log_wget_php"
         chmod 777 rasp* >>./$lp 2>>./$lpe
 	tar zxvf rasp* >>./$lp 2>>./$lpe
 	rm -r rasp* >>./$lp 2>>./$lpe
-	elif [ "$z" == "PHP_7.0.3_x86_Linux.tar.gz" ]; then
+	elif [ "$z" == "PHP_7.0.3_x86_MacOS.tar.gz" ]; then
 	curl -O --insecure https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
-	elif [ "$z" == "PHP_7.0.3_x86-64_Linux.tar.gz" ]; then
+	elif [ "$z" == "PHP_7.0.3_x86-64_MacOS.tar.gz" ]; then
 	curl -O --insecure https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
 	else
 	wget --no-check-certificate https://dl.bintray.com/pocketmine/PocketMine/$z >>./$wp 2>>./$wp
