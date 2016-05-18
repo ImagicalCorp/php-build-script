@@ -27,13 +27,15 @@ function message() {
   if [ ! -d "install_log" ]; then
     mkdir "install_log"
   fi
+  cd language
   if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        wget https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh -O language/$o.sh >>./$l 2>>./$le
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-        curl -O language/$o.sh https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh >>./$l 2>>./$le
-fi
+        wget https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh -O $o.sh >>./$l 2>>./$le
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+        curl -O $o.sh https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh >>./$l 2>>./$le
+  fi
   #curl -O language/$o.sh https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh >>./$l 2>>./$le
   #wget https://raw.githubusercontent.com/ImagicalCorp/php-build-scripts/master/language/$o.sh -O language/$o.sh >>./$l 2>>./$le
+  cd ..
   . language/$o.sh
 }
 
