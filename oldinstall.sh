@@ -86,7 +86,7 @@ wp="install_log/log_wget_php"
         chmod 755 start.sh >>./$l 2>>./$le
 	echo
 	echo "system> Installing PHP binary..."
-if [ "$z" == "RPI2" ]; then
+        if [ "$z" == "RPI2" ]; then
         wget --no-check-certificate https://raw.githubusercontent.com/keithkfng/my-files-and-icons/master/raspberry_php.tar.gz >>./$wp 2>>./$wp
         chmod 777 rasp* >>./$lp 2>>./$lpe
 	tar zxvf rasp* >>./$lp 2>>./$lpe
@@ -101,7 +101,6 @@ if [ "$z" == "RPI2" ]; then
 	chmod 777 PHP* >>./$lp 2>>./$lpe
 	tar zxvf PHP* >>./$lp 2>>./$lpe
 	rm -r PHP* >>./$lp 2>>./$lpe
-fi
 	echo
         read -e -p "system> Do you want to auto-restart your server when it stops or crashes? (Y/n):" c
         read -e -p "system> Do you want to auto-restart your server when it stops or crashes? (Y/n):" c </dev/tty
