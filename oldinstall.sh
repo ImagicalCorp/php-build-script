@@ -39,10 +39,10 @@ echo "system>   6) Exit ImagicalMine installation"
 read -e -p "system> Number (e.g. 1): " a
 read -e -p "system> Number (e.g. 1): " a </dev/tty
  case "$a" in 
-	1 ) z="PHP_7.0.2_x86_Linux.tar.gz";;
-	2 ) z="PHP_7.0.2_x86-64_Linux.tar.gz";;
-        3 ) z="PHP_7.0.2_x86_MacOS.tar.gz";;
-        4 ) z="PHP_7.0.2_x86-64_MacOS.tar.gz";;
+	1 ) z="PHP_7.0.3_x86_Linux.tar.gz";;
+	2 ) z="PHP_7.0.3_x86-64_Linux.tar.gz";;
+        3 ) z="PHP_7.0.3_x86_MacOS.tar.gz";;
+        4 ) z="PHP_7.0.3_x86-64_MacOS.tar.gz";;
         5 ) z="RPI2";;
         6 ) exit 1;;
         * ) echo "error> An unexpected error occurred - either a 10 second timeout or an unknown selection. Restart the script, and then choose again."; exit 1;;
