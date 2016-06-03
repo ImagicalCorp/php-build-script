@@ -58,21 +58,21 @@ wp="install_log/log_wget_php"
 	mkdir install_log
 	echo "system> Installing ImagicalMine..."
 	if [ "$z" == "PHP_7.0.3_x86_MacOS.tar.gz" ]; then
-	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
+	curl -O http://imagicalcorp.github.io/ImagicalMine/service-download/ImagicalMine.phar >>./$w 2>>./$w
 	elif [ "$z" == "PHP_7.0.3_x86-64_MacOS.tar.gz" ]; then
-	wget https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
+	wget http://imagicalcorp.github.io/ImagicalMine/service-download/ImagicalMine.phar >>./$w 2>>./$w
 	else
-	curl -O https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
+	curl -O http://imagicalcorp.github.io/ImagicalMine/service-download/ImagicalMine.phar >>./$w 2>>./$w
 	fi
-	chmod 777 master.zip >>./$l 2>>./$le
-	unzip -o master.zip >>./$l 2>>./$le
-	chmod 777 ImagicalMine-master >>./$l 2>>./$le
-	cd ImagicalMine-master >>./$l 2>>./$le
-	chmod 777 src >>../$l 2>>../$le
-	cp -rf src .. >>../$l 2>>../$le
-	cd .. >>../$l 2>>../$le
-	rm -rf ImagicalMine-master >>./$l 2>>./$le
-	rm -rf master.zip >>./$l 2>>./$le
+	#chmod 777 master.zip >>./$l 2>>./$le
+	#unzip -o master.zip >>./$l 2>>./$le
+	#chmod 777 ImagicalMine-master >>./$l 2>>./$le
+	#cd ImagicalMine-master >>./$l 2>>./$le
+	#chmod 777 src >>../$l 2>>../$le
+	#cp -rf src .. >>../$l 2>>../$le
+	#cd .. >>../$l 2>>../$le
+	#rm -rf ImagicalMine-master >>./$l 2>>./$le
+	#rm -rf master.zip >>./$l 2>>./$le
         if [ "$z" == "PHP_7.0.3_x86_MacOS.tar.gz" ]; then
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
 	curl -O --insecure https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
