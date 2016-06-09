@@ -39,7 +39,16 @@ wp="install_log/log_wget_php"
 
 	mkdir install_log
 	echo "system> Installing ImagicalMine..."
-	wget --no-check-certificate http://imagicalcorp.github.io/ImagicalMine/service-download/ImagicalMine.phar >>./$w 2>>./$w
+	wget --no-check-certificate https://github.com/ImagicalCorp/ImagicalMine/archive/master.zip >>./$w 2>>./$w
+        chmod 777 master.zip >>./$l 2>>./$le
+	unzip -o master.zip >>./$l 2>>./$le
+	chmod 777 ImagicalMine-master >>./$l 2>>./$le
+	cd ImagicalMine-master >>./$l 2>>./$le
+	chmod 777 src >>../$l 2>>../$le
+	cp -rf src .. >>../$l 2>>../$le
+	cd .. >>../$l 2>>../$le
+	rm -rf ImagicalMine-master >>./$l 2>>./$le
+	rm -rf master.zip >>./$l 2>>./$le
         wget --no-check-certificate https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/start.sh >>./$l 2>>./$le
         wget --no-check-certificate https://raw.githubusercontent.com/ImagicalCorp/ImagicalMine/master/LICENSE.md >>./$l 2>>./$le
         chmod 755 start.sh >>./$l 2>>./$le
