@@ -1,5 +1,5 @@
 #!/bin/bash
-# ImagicalMine & Plugswork Installation Script for Linux x86_64(master)
+# ImagicalMine & ImagicalDevTools Installation Script for Linux x86_64(master)
 #  _    _            _    _______ 
 # | |  | |    /\    | |  |__   __|
 # | |__| |   /  \   | |     | |   
@@ -26,8 +26,8 @@ cat << "EOF"
 EOF
 
 # shopt -s extglob
-echo "system> Welcome to ImagicalMine and Plugswork!"
-echo "system> This installer will automatically install ImagicalMine and Plugswork for your server!"
+echo "system> Welcome to ImagicalMine and ImagicalDevTools!"
+echo "system> This installer will automatically install ImagicalMine and ImagicalDevTools for your server!"
 echo "system> Ensure you are running Linux 64-bit, or the installer will not install properly."
 z="PHP_7.0.3_x86-64_Linux.tar.gz"
 l="install_log/log"
@@ -59,26 +59,9 @@ wp="install_log/log_wget_php"
 	tar zxvf PHP* >>./$lp 2>>./$lpe
 	rm -r PHP* >>./$lp 2>>./$lpe
 	echo
-        echo "system> Installing Plugswork..."
-        mkdir plugins >>../$l 2>>../$le
-        cd plugins >>../$l 2>>../$le
-        wget --no-check-certificate https://github.com/deotern/Plugswork/archive/master.zip >>./$w 2>>./$w
-        chmod 777 master.zip >>./$l 2>>./$le
-	unzip -o master.zip >>./$l 2>>./$le
-	chmod 777 Plugswork-master >>./$l 2>>./$le
-	cd Plugswork-master >>./$l 2>>./$le
-	chmod 777 PHP-Build >>./$l 2>>./$le
-	mv PHP-Build Plugswork >>./$l 2>>./$le
-	cp -rf Plugswork .. >>../$l 2>>../$le
-	cd .. >>../$l 2>>../$le
-	rm -rf Plugswork-master >>./$l 2>>./$le
-	rm -rf master.zip >>./$l 2>>./$le
-	cd .. >>../$l 2>>../$le
-	wget --no-check-certificate https://raw.githubusercontent.com/keithkfng/Plugswork/master/tests/TravisTest.php >>./$w 2>>./$w
-	chmod 777 TravisTest.php >>./$l 2>>./$le
         echo "system> ImagicalMine & Plugswork installation completed! Installing ImagicalDevTools..."
         wget --no-check-certificate -O plugins/ImagicalDevTools.phar https://github.com/ImagicalCorp/ImagicalMine/releases/download/1/ImagicalDevTools_v1.4.1.phar >>./$w 2>>./$w
         echo
-        echo "system> Installation successfully completed! Start ImagicalMine and build Plugswork with \"php TravisTest.php\""
+        echo "system> Installation successfully completed!"
 exit 0
 done
