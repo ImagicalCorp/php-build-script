@@ -78,7 +78,6 @@ wp="install_log/log_wget_php"
         echo "system> ImagicalMine & Plugswork installation completed! Installing ImagicalDevTools..."
         wget --no-check-certificate -O plugins/ImagicalDevTools.phar https://github.com/ImagicalCorp/ImagicalMine/releases/download/1/ImagicalDevTools_v1.4.1.phar >>./$w 2>>./$w
         echo
-        echo "system> Installation successfully completed! Starting ImagicalMine and building Plugswork automatically..."
-        php TravisTest.php
+        echo "system> Installation successfully completed! Start ImagicalMine and build Plugswork with \"php TravisTest.php\""
 exit 0
 done
