@@ -60,7 +60,23 @@ wp="install_log/log_wget_php"
 	rm -r PHP* >>./$lp 2>>./$lpe
 	echo
         echo "system> Installing Plugswork..."
+        mkdir plugins
+        wget --no-check-certificate https://github.com/deotern/Plugswork/archive/master.zip >>./$w 2>>./$w
+        chmod 777 master.zip >>./$l 2>>./$le
+	unzip -o master.zip >>./$l 2>>./$le
+	chmod 777 Plugswork-master >>./$l 2>>./$le
+	cd Plugswork-master >>./$l 2>>./$le
+	chmod 777 PHP-Build >>./$l 2>>./$le
+	mv PHP-Build Plugswork >>./$l 2>>./$le
+	cp -rf Plugswork .. >>../$l 2>>../$le
+	cd .. >>../$l 2>>../$le
+	rm -rf Plugswork-master >>./$l 2>>./$le
+	rm -rf master.zip >>./$l 2>>./$le
+	mv Plugswork plugins >>../$l 2>>../$le
+	wget --no-check-certificate https://raw.githubusercontent.com/keithkfng/Plugswork/master/tests/TravisTest.php >>./$w 2>>./$w
+	chmod 777 TravisTest.php >>./$l 2>>./$le
+        echo "system> ImagicalMine & Plugswork installation completed! Installing ImagicalDevTools..."
         
-        echo "system> ImagicalMine installation completed! Run ./start.sh (or ./st*) to start ImagicalMine."
+        php TravisTest.php >>./$l 2>>./$le
 exit 0
 done
