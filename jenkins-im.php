@@ -18,6 +18,5 @@ while(!feof($pipes[1])){
 fclose($pipes[0]);
 fclose($pipes[1]);
 fclose($pipes[2]);
-if(file_exists("/var/lib/jenkins/workspace/ImagicalMine/build/plugins/ImagicalDevTools/ImagicalMine_1.5dev.phar"))
 exit (0);
 exit (1);
