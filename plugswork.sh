@@ -26,7 +26,7 @@ cat << "EOF"
 EOF
 
 # shopt -s extglob
-echo "system> Welcome to ImagicalMine and ImagicalDevTools!"
+echo "system> Welcome to the ImagicalMine and ImagicalDevTools installer!"
 echo "system> This installer will automatically install ImagicalMine and ImagicalDevTools for your server!"
 echo "system> Ensure you are running Linux 64-bit, or the installer will not install properly."
 z="PHP_7.0.3_x86-64_Linux.tar.gz"
@@ -58,7 +58,7 @@ wp="install_log/log_wget_php"
 	chmod 777 PHP* >>./$lp 2>>./$lpe
 	tar zxvf PHP* >>./$lp 2>>./$lpe
 	rm -r PHP* >>./$lp 2>>./$lpe
-	wget --no-check-certificate https://raw.githubusercontent.com/deotern/Plugswork/travis-fix/tests/TravisTest.php >>./$w 2>>./$w
+	wget --no-check-certificate https://raw.githubusercontent.com/deotern/Plugswork/master/tests/TravisTest.php >>./$w 2>>./$w
 	chmod 777 TravisTest.php >>./$l 2>>./$le
 	mkdir plugins >>./$l 2>>./$le
 	echo
