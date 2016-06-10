@@ -18,7 +18,7 @@ while(!feof($pipes[1])){
 fclose($pipes[0]);
 fclose($pipes[1]);
 fclose($pipes[2]);
-rename("./build/plugins/DevTools/Plugswork*.phar","./releases/Plugswork.phar");
+rename("./build/plugins/ImagicalDevTools//Plugswork*.phar","./releases/Plugswork.phar");
 if(file_exists("./releases/Plugswork.phar"))
 if (isset($argv[1])) {
     copy('./releases/Plugswork.phar', './releases/Plugswork_#' . $argv[1]);
