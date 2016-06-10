@@ -9,7 +9,7 @@ $server = proc_open(PHP_BINARY . " src/pocketmine/PocketMine.php --no-wizard --d
 sleep (5);
 fwrite($pipes[0], "version\n");
 sleep (5);
-fwrite($pipes[0], "makeserver\n");
+fwrite($pipes[0], "compileplugin Plugswork\n");
 sleep (5);
 fwrite($pipes[0], "stop\n");
 while(!feof($pipes[1])){
